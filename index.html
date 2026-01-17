@@ -1,44 +1,83 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>Арена королевств</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VERSUS AI</title>
+
   <style>
     body {
-      background: #111;
-      color: #fff;
-      font-family: monospace;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1a1a1a, #0f0f0f);
+      color: white;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
     }
-    .box {
-      border: 2px solid #444;
+
+    .container {
+      text-align: center;
+      max-width: 600px;
       padding: 20px;
-      width: 300px;
     }
-    input, button {
-      width: 100%;
-      margin-top: 10px;
-      padding: 8px;
-      background: #222;
-      color: #fff;
-      border: 1px solid #555;
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
     }
+
+    p {
+      font-size: 18px;
+      opacity: 0.85;
+      margin-bottom: 30px;
+    }
+
     button {
+      font-size: 18px;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 8px;
+      background: #00ff99;
+      color: #000;
       cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 255, 153, 0.4);
+    }
+
+    .hint {
+      margin-top: 20px;
+      font-size: 12px;
+      opacity: 0.5;
     }
   </style>
 </head>
-<body>
 
-  <div class="box">
-    <h2>Вход в мир</h2>
-    <input placeholder="Логин">
-    <input type="password" placeholder="Пароль">
-    <button>Войти</button>
+<body>
+  <div class="container">
+    <h1>VERSUS AI</h1>
+    <p>
+      Две цивилизации. Два ИИ-правителя.<br />
+      Зрители решают исход битвы.
+    </p>
+
+    <button onclick="enterArena()">Войти в арену</button>
+
+    <div class="hint">
+      Prototype version • In development
+    </div>
   </div>
 
+  <script>
+    function enterArena() {
+      alert("Скоро здесь будет турнирная арена 👑");
+    }
+  </script>
 </body>
 </html>
