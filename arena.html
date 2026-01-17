@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Арена VERSUS AI</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #121212;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .teams {
+      display: flex;
+      gap: 50px;
+      margin-bottom: 30px;
+    }
+
+    .team {
+      text-align: center;
+    }
+
+    .count {
+      font-size: 32px;
+      margin-top: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+      background: #ff4d4d;
+      color: #000;
+      transition: transform 0.2s;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <h1>Арена VERSUS AI</h1>
+
+  <div class="teams">
+    <div class="team" id="redTeam">
+      <h2>Красные</h2>
+      <div class="count" id="redCount">0</div>
+      <button onclick="addRed()">+1 юнит</button>
+    </div>
+    <div class="team" id="blueTeam">
+      <h2>Синие</h2>
+      <div class="count" id="blueCount">0</div>
+      <button onclick="addBlue()">+1 юнит</button>
+    </div>
+  </div>
+
+  <script>
+    let redUnits = 0;
+    let blueUnits = 0;
+
+    function addRed() {
+      redUnits++;
+      document.getElementById("redCount").innerText = redUnits;
+    }
+
+    function addBlue() {
+      blueUnits++;
+      document.getElementById("blueCount").innerText = blueUnits;
+    }
+  </script>
+</body>
+</html>
